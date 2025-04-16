@@ -10,7 +10,10 @@ class GestorTorneos {
         this.torneos = new ArrayList<>();
     }
 
-    public void crearTorneo(String nombre, String deporte, String categoria, String modalidad, String tipo) {
+    public void crearTorneo(String nombre, EDeporte deporte, ECategoriaEquipo categoria, String modalidad, String tipo) {
         torneos.add(new Torneo(nombre, deporte, categoria, modalidad, tipo));
+    }
+    public List<Torneo> getTorneos() {
+        return torneos;
     }
 }

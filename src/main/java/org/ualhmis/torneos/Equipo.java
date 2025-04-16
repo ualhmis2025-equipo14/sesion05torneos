@@ -5,13 +5,13 @@ import java.util.List;
 
 class Equipo {
     private String nombre;
-    private String categoria;
+    private ECategoriaEquipo categoria;
     private String modalidad;
     private Entrenador entrenador;
     private Entrenador segundoEntrenador;
     private List<Jugador> jugadores;
 
-    public Equipo(String nombre, String categoria, String modalidad, Entrenador entrenador) {
+    public Equipo(String nombre, ECategoriaEquipo categoria, String modalidad, Entrenador entrenador) {
         if (nombre == null || nombre.trim().isEmpty()) {
             throw new IllegalArgumentException("El nombre del equipo no puede estar vacío");
         }
@@ -37,11 +37,11 @@ class Equipo {
 
 
 	public String getCategoria() {
-		return categoria;
+		return categoria.toString();
 	}
 
 
-	public void setCategoria(String categoria) {
+	public void setCategoria(ECategoriaEquipo categoria) {
 		this.categoria = categoria;
 	}
 
