@@ -22,7 +22,7 @@ class Torneo {
     }
 
     public void registrarEquipo(Equipo equipo) throws IllegalArgumentException {
-        if (!equipo.getCategoria().equals(this.categoria) || !equipo.getModalidad().equals(this.modalidad)) {
+        if (!equipo.getCategoria().equals(this.categoria.toString()) || !equipo.getModalidad().equals(this.modalidad.toString())) {
             throw new IllegalArgumentException("El equipo no cumple con la categoría y modalidad del torneo");
         }
         if (!equipos.contains(equipo)) {

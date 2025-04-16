@@ -11,7 +11,11 @@ import java.time.LocalDate;
 
 class TorneoTest {
 
-    @Test
+    @ParameterizedTest
+     @CsvSource({
+            "Tigres, Juvenil, Masculino",
+            
+    })
     void testRegistrarEquipoCorrectamente(String nombre, String categoria, String modalidad) {
         Torneo torneo = new Torneo("Liga Juvenil",EDeporte.Futbol, ECategoriaEquipo.Juvenil, "Masculino", "Liga");
 

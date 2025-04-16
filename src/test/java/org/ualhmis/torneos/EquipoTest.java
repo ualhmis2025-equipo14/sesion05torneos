@@ -5,7 +5,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.time.LocalDate;
 
-// Creación de jugadores y cálculo automático de categoría
+
 
 class EquipoTest {
 

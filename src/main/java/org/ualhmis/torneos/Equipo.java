@@ -124,7 +124,7 @@ class Equipo {
 
 
 	public void agregarJugador(Jugador jugador) {
-        if (!jugadores.contains(jugador) && jugador.getCategoria().equals(this.categoria)) {
+        if (!jugadores.contains(jugador) && jugador.getCategoria().equalsIgnoreCase(this.categoria.toString())) {
             jugadores.add(jugador);
         }
     }
