@@ -11,9 +11,10 @@ class EquipoTest {
 
     @ParameterizedTest
     @CsvSource({
-            "Luis, Masculino, 2006-07-15", // Juvenil
-            "Ana, Femenino, 2010-05-20", // Infantil
-            "Carlos, Masculino, 2003-08-30" // Junior
+        //"Carlos, Masculino, 2003-08-30" // Absoluto, "Luis, Masculino, 2006-07-15", // Junior
+        // Los de arriba no funcionarán ya que el grupo esta determinado juvenil y su edad no coincide con juvenil
+            "Jose, Masculino, 2010-05-20", // Juvenil
+            
     })
     void testAgregarJugadorCorrectamente(String nombre, String genero, String fechaNacimiento) {
         Entrenador entrenador = new Entrenador("Carlos", EGenero.Masculino, LocalDate.of(1980, 3, 10));
