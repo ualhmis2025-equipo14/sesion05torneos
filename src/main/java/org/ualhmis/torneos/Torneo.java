@@ -3,15 +3,16 @@ package org.ualhmis.torneos;
 import java.util.ArrayList;
 import java.util.List;
 
+
 class Torneo {
     private String nombre;
-    private String deporte;
-    private String categoria;
+    private EDeporte deporte;
+    private ECategoriaEquipo categoria;
     private String modalidad;
     private List<Equipo> equipos;
     private String tipo;
 
-    public Torneo(String nombre, String deporte, String categoria, String modalidad, String tipo) {
+    public Torneo(String nombre, EDeporte deporte, ECategoriaEquipo categoria, String modalidad, String tipo) {
         this.nombre = nombre;
         this.deporte = deporte;
         this.categoria = categoria;
@@ -20,8 +21,8 @@ class Torneo {
         this.equipos = new ArrayList<>();
     }
 
-    public void registrarEquipo(Equipo equipo) {
-        if (!equipo.getCategoria().equals(this.categoria) || !equipo.getModalidad().equals(this.modalidad)) {
+    public void registrarEquipo(Equipo equipo) throws IllegalArgumentException {
+        if (!equipo.getCategoria().equals(this.categoria.toString()) || !equipo.getModalidad().equals(this.modalidad.toString())) {
             throw new IllegalArgumentException("El equipo no cumple con la categoría y modalidad del torneo");
         }
         if (!equipos.contains(equipo)) {
@@ -38,18 +39,18 @@ class Torneo {
 	}
 
 	public String getDeporte() {
-		return deporte;
+		return deporte.toString();
 	}
 
-	public void setDeporte(String deporte) {
+	public void setDeporte(EDeporte deporte) {
 		this.deporte = deporte;
 	}
 
-	public String getCategoria() {
-		return categoria;
+	public String getCategoriaEquipo() {
+		return categoria.toString();
 	}
 
-	public void setCategoria(String categoria) {
+	public void setCategoriaEquipo(ECategoriaEquipo categoria) {
 		this.categoria = categoria;
 	}
 
