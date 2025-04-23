@@ -104,20 +104,11 @@ class Equipo {
 		if (getClass() != obj.getClass())
 			return false;
 		Equipo other = (Equipo) obj;
-		if (categoria == null) {
-			if (other.categoria != null)
-				return false;
-		} else if (!categoria.equals(other.categoria))
+		if (!categoria.equals(other.categoria))
 			return false;
-		if (modalidad == null) {
-			if (other.modalidad != null)
-				return false;
-		} else if (!modalidad.equals(other.modalidad))
+		if (!modalidad.equals(other.modalidad))
 			return false;
-		if (nombre == null) {
-			if (other.nombre != null)
-				return false;
-		} else if (!nombre.equals(other.nombre))
+		if (!nombre.equals(other.nombre))
 			return false;
 		return true;
 	}
