@@ -13,8 +13,8 @@ class JugadorTest {
     @CsvSource({
             "Carlos, Masculino, 2015-05-10", // Infantil
             "Luis, Masculino, 2011-03-15", // Cadete
-            "Ana, Femenino, 2005-08-22", // Juvenil
-            "Pedro, Masculino, 2002-01-30", // Junior
+            "Ana, Femenino, 2008-08-22", // Juvenil
+            "Pedro, Masculino, 2006-01-30", // Junior
             "Marta, Femenino, 1998-06-05" // Absoluta
     })
     void testCategoriaPorEdad(String nombre, String genero, String fechaNacimiento) {
